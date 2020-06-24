@@ -1,5 +1,7 @@
 {
   "name": "message_with_ac_exercise_alt",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }
