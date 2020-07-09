@@ -7,7 +7,7 @@ class MessageChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def speak(data)
-    ActionCable.server.broadcast 'message_channel', message: data['message']
-  end
+  # def speak(data)
+  #   ActionCable.server.broadcast 'message_channel', message: data['message']
+  # end
 end

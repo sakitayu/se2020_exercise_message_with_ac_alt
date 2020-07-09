@@ -1,4 +1,4 @@
-App.message = App.cable.subscriptions.create "MessageChannel",
+App.matching = App.cable.subscriptions.create "MatchingChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 
@@ -6,7 +6,8 @@ App.message = App.cable.subscriptions.create "MessageChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('#messages').append data['message']
+    $('#users').append data['ping']
+    #$('#users').append "フォローされました"
 
-  # speak: (message) ->
-  #   @perform 'speak', message: message
+  # follow: ->
+  #   @perform 'follow'
