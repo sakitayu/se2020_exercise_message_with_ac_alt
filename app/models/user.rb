@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  #after_create_commit { MatchingBroadcastJob.perform_later self }
   validates :name,  presence: true, length: { maximum: 30 }
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }

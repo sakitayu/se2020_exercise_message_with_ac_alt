@@ -1,4 +1,5 @@
 <h2>ユーザー</h2>
+<p><%= current_user.name %>としてログインしてます</p>
 <% @users.each do |user| %>
   <% if user.id != current_user.id %>
     <li>
@@ -12,4 +13,4 @@
 <% end %>
 
 <div>ここに表示されるはず↓</div>
-<div id="users"></div>
+<div id="notification_id_is<%= current_user.id %>"></div>

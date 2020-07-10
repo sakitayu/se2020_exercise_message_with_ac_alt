@@ -6,8 +6,10 @@ App.matching = App.cable.subscriptions.create "MatchingChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('#users').append data['ping']
-    #$('#users').append "フォローされました"
+    ping = data['ping']
+    followed_id = data['followed_id']
+    target_div = '#notification_id_is' + followed_id
+    $(target_div).append data['ping']
 
   # follow: ->
   #   @perform 'follow'
