@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_06_24_090606) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.boolean "remove"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
